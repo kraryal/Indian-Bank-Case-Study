@@ -43,6 +43,7 @@ A comprehensive SQL Server database implementation for an Indian Bank system wit
 Krishna Aryal - Georgia Institute of Technology
 
 #Project Structure
+```
 Indian-Bank-SQL-Case-Study/
 ├── README.md
 ├── database/
@@ -63,3 +64,4 @@ Indian-Bank-SQL-Case-Study/
 │   └── business_rules.md
 └── images/
     └── erd_diagram.png
+```
