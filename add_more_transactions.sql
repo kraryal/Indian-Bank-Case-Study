@@ -1,0 +1,89 @@
+USE [INDIAN BANK];
+GO
+
+-- =====================================================
+-- ADD MORE REALISTIC TRANSACTIONS FOR BETTER ANALYTICS
+-- =====================================================
+
+-- Temporarily disable triggers for bulk insert
+ALTER TABLE [TRANSACTION MASTER] DISABLE TRIGGER ALL;
+GO
+
+-- Add more transactions for each account to show meaningful analytics
+INSERT INTO [TRANSACTION MASTER] ([DATE OF TRANSACTION], ACID, BRID, TXN_TYPE, CHQ_NO, CHQ_DATE, TXN_AMOUNT, USERID) VALUES
+
+-- Praveen Kumar (1001) - High activity customer
+(DATEADD(DAY, -30, GETDATE()), 1001, 'BR1', 'CD', NULL, NULL, 25000, 102),
+(DATEADD(DAY, -25, GETDATE()), 1001, 'BR1', 'CW', NULL, NULL, 10000, 102),
+(DATEADD(DAY, -20, GETDATE()), 1001, 'BR1', 'CQD', 12346, DATEADD(DAY, -21, GETDATE()), 15000, 102),
+(DATEADD(DAY, -10, GETDATE()), 1001, 'BR1', 'CD', NULL, NULL, 20000, 102),
+(DATEADD(DAY, -8, GETDATE()), 1001, 'BR1', 'CW', NULL, NULL, 5000, 102),
+
+-- Anita Gupta (1002) - Business account with high volume
+(DATEADD(DAY, -35, GETDATE()), 1002, 'BR2', 'CD', NULL, NULL, 150000, 106),
+(DATEADD(DAY, -30, GETDATE()), 1002, 'BR2', 'CW', NULL, NULL, 80000, 106),
+(DATEADD(DAY, -25, GETDATE()), 1002, 'BR2', 'CQD', 67891, DATEADD(DAY, -26, GETDATE()), 50000, 106),
+(DATEADD(DAY, -15, GETDATE()), 1002, 'BR2', 'CD', NULL, NULL, 75000, 106),
+(DATEADD(DAY, -12, GETDATE()), 1002, 'BR2', 'CW', NULL, NULL, 40000, 106),
+
+-- Suresh Reddy (1003) - Regular customer
+(DATEADD(DAY, -28, GETDATE()), 1003, 'BR3', 'CD', NULL, NULL, 20000, 103),
+(DATEADD(DAY, -22, GETDATE()), 1003, 'BR3', 'CW', NULL, NULL, 8000, 103),
+(DATEADD(DAY, -15, GETDATE()), 1003, 'BR3', 'CD', NULL, NULL, 12000, 103),
+(DATEADD(DAY, -8, GETDATE()), 1003, 'BR3', 'CW', NULL, NULL, 5000, 103),
+
+-- Rohit Sharma (1004) - Medium activity
+(DATEADD(DAY, -20, GETDATE()), 1004, 'BR3', 'CD', NULL, NULL, 25000, 103),
+(DATEADD(DAY, -18, GETDATE()), 1004, 'BR3', 'CW', NULL, NULL, 8000, 103),
+(DATEADD(DAY, -10, GETDATE()), 1004, 'BR3', 'CQD', 11112, DATEADD(DAY, -11, GETDATE()), 15000, 103),
+(DATEADD(DAY, -6, GETDATE()), 1004, 'BR3', 'CW', NULL, NULL, 3000, 103),
+
+-- Kavita Jain (1005) - Regular transactions
+(DATEADD(DAY, -25, GETDATE()), 1005, 'BR4', 'CD', NULL, NULL, 18000, 104),
+(DATEADD(DAY, -20, GETDATE()), 1005, 'BR4', 'CW', NULL, NULL, 6000, 104),
+(DATEADD(DAY, -12, GETDATE()), 1005, 'BR4', 'CD', NULL, NULL, 10000, 104),
+(DATEADD(DAY, -5, GETDATE()), 1005, 'BR4', 'CW', NULL, NULL, 4000, 104),
+
+-- Deepak Mehta (1006) - Business customer
+(DATEADD(DAY, -30, GETDATE()), 1006, 'BR5', 'CD', NULL, NULL, 40000, 106),
+(DATEADD(DAY, -25, GETDATE()), 1006, 'BR5', 'CQD', 11113, DATEADD(DAY, -26, GETDATE()), 25000, 106),
+(DATEADD(DAY, -18, GETDATE()), 1006, 'BR5', 'CW', NULL, NULL, 15000, 106),
+(DATEADD(DAY, -10, GETDATE()), 1006, 'BR5', 'CD', NULL, NULL, 30000, 106),
+
+-- Pooja Singh (1007) - Small account, regular user
+(DATEADD(DAY, -15, GETDATE()), 1007, 'BR1', 'CD', NULL, NULL, 8000, 102),
+(DATEADD(DAY, -12, GETDATE()), 1007, 'BR1', 'CW', NULL, NULL, 2000, 102),
+(DATEADD(DAY, -8, GETDATE()), 1007, 'BR1', 'CD', NULL, NULL, 5000, 102),
+(DATEADD(DAY, -3, GETDATE()), 1007, 'BR1', 'CW', NULL, NULL, 1500, 102),
+
+-- Ravi Patel (1008) - Regular customer
+(DATEADD(DAY, -20, GETDATE()), 1008, 'BR2', 'CD', NULL, NULL, 12000, 106),
+(DATEADD(DAY, -16, GETDATE()), 1008, 'BR2', 'CW', NULL, NULL, 4000, 106),
+(DATEADD(DAY, -10, GETDATE()), 1008, 'BR2', 'CD', NULL, NULL, 8000, 106),
+(DATEADD(DAY, -5, GETDATE()), 1008, 'BR2', 'CW', NULL, NULL, 2500, 106),
+
+-- Lakshmi Iyer (1009) - Conservative user
+(DATEADD(DAY, -18, GETDATE()), 1009, 'BR3', 'CD', NULL, NULL, 10000, 103),
+(DATEADD(DAY, -12, GETDATE()), 1009, 'BR3', 'CW', NULL, NULL, 3000, 103),
+(DATEADD(DAY, -6, GETDATE()), 1009, 'BR3', 'CD', NULL, NULL, 6000, 103),
+
+-- Neha Kapoor (1011) - Some activity
+(DATEADD(DAY, -22, GETDATE()), 1011, 'BR5', 'CD', NULL, NULL, 15000, 106),
+(DATEADD(DAY, -15, GETDATE()), 1011, 'BR5', 'CW', NULL, NULL, 5000, 106),
+(DATEADD(DAY, -8, GETDATE()), 1011, 'BR5', 'CD', NULL, NULL, 7000, 106);
+
+-- Re-enable triggers
+ALTER TABLE [TRANSACTION MASTER] ENABLE TRIGGER ALL;
+GO
+
+PRINT '✅ Additional transaction data added successfully!';
+PRINT '';
+PRINT 'Updated Data Summary:';
+SELECT 'Total Accounts' as [Metric], COUNT(*) as [Count] FROM [ACCOUNT MASTER]
+UNION ALL
+SELECT 'Total Transactions', COUNT(*) FROM [TRANSACTION MASTER]
+UNION ALL
+SELECT 'Active Accounts with Transactions', COUNT(DISTINCT ACID) FROM [TRANSACTION MASTER]
+UNION ALL
+SELECT 'Average Transactions per Account', AVG(txn_count) 
+FROM (SELECT COUNT(*) as txn_count FROM [TRANSACTION MASTER] GROUP BY ACID) as subq;
