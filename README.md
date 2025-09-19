@@ -29,8 +29,6 @@
 
 ### 2. ** Sample Queries Showcase**
 
--- 🎯 Customer Behavior Analysis
-```
 ```sql
 SELECT 
     am.NAME AS customer_name,
