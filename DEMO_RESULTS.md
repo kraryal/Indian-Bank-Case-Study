@@ -4,13 +4,10 @@
 
 ### 1. Customer Segmentation Analysis
 
-```image
-```
+![App Snapshot](images/customer_segmentation.png)
 ### 2. Top Performing Customers
 
-```image
-
-```
+![App Snapshot](images/top_performing_customers.png)
 
 ## 🎯 Business Intelligence Insights
 - **Revenue Concentration**: Top 20% customers generate 65% of transaction volume
