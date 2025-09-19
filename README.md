@@ -29,11 +29,6 @@
 
 ### 2. ** Sample Queries Showcase**
 
-```sql
--- =====================================================
--- SAMPLE ANALYTICS FOR HIRING MANAGERS
--- =====================================================
-
 -- 🎯 Customer Behavior Analysis
 ```
 ```sql
