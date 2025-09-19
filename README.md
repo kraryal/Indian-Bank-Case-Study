@@ -79,11 +79,6 @@ SELECT * FROM high_value_customers
 WHERE days_inactive > 30 OR days_inactive IS NULL;
 ```
 
-### 3. **Create Project Documentation**
-**File: `PROJECT_STRUCTURE.md`**
-
-# 📁 Project Structure Guide
-
 ## 🗂️ File Organization
 ```
 ├── 📄 Ibank.bak                    # Complete database backup
