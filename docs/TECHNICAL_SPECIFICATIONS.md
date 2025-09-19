@@ -53,63 +53,7 @@
 
 ### Entity Relationship Diagram
 ![App Snapshot](images/dbo_diagram.png)
-```
-    REGION MASTER (1) ──────┐
-    ┌─────────────────┐     │
-    │ RID (PK)        │     │
-    │ REGION_NAME     │     │
-    └─────────────────┘     │
-                            │ (1:N)
-    PRODUCT MASTER (1) ─────┼──┐
-    ┌─────────────────┐     │  │
-    │ PID (PK)        │     │  │
-    │ PRODUCT_NAME    │     │  │
-    └─────────────────┘     │  │
-                            │  │ (1:N)
-                            ▼  │
-         BRANCH MASTER (N) ─────┼──┐
-         ┌─────────────────┐     │  │
-         │ BRID (PK)       │     │  │
-         │ BRANCH_NAME     │     │  │
-         │ BRANCH_ADDRESS  │     │  │
-         │ RID (FK)        │─────┘  │
-         └─────────────────┘        │ (1:N)
-                                    │
-                                    ▼
-            ACCOUNT MASTER (N) ──────┘
-            ┌─────────────────┐
-            │ ACID (PK)       │
-            │ NAME            │
-            │ ADDRESS         │
-            │ BRID (FK)       │──────┐
-            │ PID (FK)        │      │
-            │ DATE_OF_OPENING │      │ (1:N)
-            │ CLEAR_BALANCE   │      │
-            │ UNCLEAR_BALANCE │      │
-            │ STATUS          │      │
-            └─────────────────┘      │
-                                     │
-    USER MASTER (1) ─────────────────┼──┐
-    ┌─────────────────┐              │  │
-    │ USERID (PK)     │              │  │
-    │ USER_NAME       │              │  │ (1:N)
-    │ DESIGNATION     │              │  │
-    └─────────────────┘              │  │
-                                     │  │
-                                     ▼  ▼
-                        TRANSACTION MASTER (N)
-                        ┌─────────────────┐
-                        │ TXN_NUMBER (PK) │
-                        │ DATE_OF_TXN     │
-                        │ ACID (FK)       │─────┘
-                        │ BRID (FK)       │
-                        │ TXN_TYPE        │
-                        │ CHQ_NO          │
-                        │ CHQ_DATE        │
-                        │ TXN_AMOUNT      │
-                        │ USERID (FK)     │─────┘
-                        └─────────────────┘
-```
+
 
 ### Table Specifications
 
