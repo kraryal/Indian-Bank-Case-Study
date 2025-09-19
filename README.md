@@ -1,70 +1,31 @@
 # 🏦 Indian Bank Database Management System
-*A comprehensive banking database system demonstrating SQL expertise and data analytics for financial services*
 
-[![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoft-sql-server&logoColor=white)](https://www.microsoft.com/sql-server)
-[![Database Design](https://img.shields.io/badge/Database-Design-blue)](https://github.com/kraryal/Indian-Bank-Case-Study)
-[![Business Intelligence](https://img.shields.io/badge/Business-Intelligence-green)](https://github.com/kraryal/Indian-Bank-Case-Study)
+> **Perfect for Data Science Interviews** - Comprehensive banking system showcasing SQL expertise, business intelligence, and financial analytics.
 
-## 🎯 Project Overview
-Complete banking system with **19 business rules**, **24+ analytical queries**, and **automated reporting** - showcasing skills perfect for **Data Science roles in Banking & Finance**.
+[![View Demo Results](https://img.shields.io/badge/📊-View%20Demo%20Results-blue)](./DEMO_RESULTS.md)
+[![Quick Demo](https://img.shields.io/badge/⚡-Quick%20Demo-green)](./QUICK_DEMO.sql)
+[![Database Ready](https://img.shields.io/badge/💾-Database%20Ready-orange)](./Ibank.bak)
 
-## 💼 Skills Demonstrated
-- **Advanced SQL** (Triggers, Stored Procedures, Complex Joins)
-- **Database Architecture** & Design
-- **Business Intelligence** & Analytics  
-- **Financial Domain** Knowledge
-- **Data Modeling** & Constraints
+## 🚀 **For Hiring Managers - 30 Second Demo**
+1. **Import Database**: Restore `Ibank.bak` in SQL Server
+2. **Run Quick Demo**: Execute `QUICK_DEMO.sql`  
+3. **See Full Analytics**: Run `sample_analytics.sql`
 
-## 🏗️ Database Architecture
-- **6 Master Tables** with referential integrity
-- **19 Business Rules** implemented via triggers
-- **5 Custom Views** for reporting
-- **24+ Analytical Queries** for insights
-- **Professional Reports** with stored procedures
+## 💼 **Skills Demonstrated**
+- Advanced SQL (Triggers, Stored Procedures, Complex Analytics)
+- Database Architecture & Design
+- Business Intelligence & Reporting
+- Financial Domain Expertise
+- Data-driven Decision Making
 
-## 📊 Analytics Capabilities
-
-```sql
--- Query 9: List the product having the maximum number of accounts
-WITH ProductAccountCount AS (
-    SELECT 
-        pm.PID,
-        pm.[PRODUCT NAME],
-        COUNT(am.ACID) AS AccountCount
-    FROM [PRODUCT MASTER] pm
-    LEFT JOIN [ACCOUNT MASTER] am ON pm.PID = am.PID
-    GROUP BY pm.PID, pm.[PRODUCT NAME]
-)
-SELECT 
-    PID,
-    [PRODUCT NAME],
-    AccountCount AS [Number of Accounts]
-FROM ProductAccountCount
-WHERE AccountCount = (SELECT MAX(AccountCount) FROM ProductAccountCount);
-GO
-```
-
-## 🚀 Quick Start
-1. **Restore Database**: Import `Ibank.bak` into SQL Server
-2. **Run Setup**: Execute scripts in numbered order
-3. **Explore Analytics**: Try queries from `analytics/` folder
-
-## 📈 Business Value
-- **Fraud Detection**: Transaction pattern monitoring
-- **Risk Analysis**: Account behavior tracking  
-- **Customer Insights**: Usage pattern analytics
-- **Compliance**: Automated business rule enforcement
-
-## 🎯 Perfect for Data Science Roles
-Demonstrates skills for:
-- Banking/Finance Data Science positions
-- Business Intelligence roles
-- Risk Analytics positions
-- SQL-heavy analytics roles
+## 📈 **Real-World Applications**
+- **Customer Segmentation**: Identify high-value customers and risk patterns
+- **Fraud Detection**: Automated transaction monitoring and alerts
+- **Business Intelligence**: Branch performance and revenue analysis
+- **Compliance**: Automated enforcement of banking regulations
 
 ---
-*This project showcases real-world database design and analytics skills applicable to financial services data science roles.*
-```
+*This project demonstrates production-ready database skills applicable to Data Science roles in Banking, Finance, and Business Intelligence.*
 
 ### 2. **Add Sample Queries Showcase**
 **File: `sample_analytics.sql`**
@@ -135,5 +96,27 @@ WHERE days_inactive > 30 OR days_inactive IS NULL;
 ├── 📈 07_queries_advanced_analytics.sql # Complex analytics
 ├── 🧮 08_queries_complex_analysis.sql # Advanced analysis
 ├── 📋 09_stored_procedures.sql     # Automated reporting
-└── 💡 sample_analytics.sql        # Demo queries for hiring managers
+└── 💡 10_sample_data_extended.sql
+└── 💡 11_demo_analytics.sql        # Demo queries for hiring managers
+```
+## 🚀 **Quick Start for Hiring Managers**
+```bash
+# Option 1: Use backup file (Recommended)
+1. Restore Ibank.bak in SQL Server Management Studio
+2. Run QUICK_DEMO.sql for immediate results
+
+# Option 2: Build from scratch  
+1. Execute files in numerical order (01_database_creation.sql → 09_stored_procedures.sql)
+2. Run 10_sample_data_extended.sql for realistic data
+3. Execute 11_demo_analytics.sql for impressive results
+
+### 2. **Add GitHub Topics/Tags**
+In your GitHub repo settings, add these tags:
+- `sql-server`
+- `database-design` 
+- `banking-system`
+- `data-science`
+- `business-intelligence`
+- `financial-analytics`
+- `portfolio-project`
 ```
