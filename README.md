@@ -6,7 +6,7 @@
 [![Quick Demo](https://img.shields.io/badge/⚡-Quick%20Demo-green)](./QUICK_DEMO.sql)
 [![Database Ready](https://img.shields.io/badge/💾-Database%20Ready-orange)](./Ibank.bak)
 
-## 🚀 **For Hiring Managers - 30 Second Demo**
+## 🚀 **Demo**
 1. **Import Database**: Restore `Ibank.bak` in SQL Server
 2. **Run Quick Demo**: Execute `QUICK_DEMO.sql`  
 3. **See Full Analytics**: Run `sample_analytics.sql`
