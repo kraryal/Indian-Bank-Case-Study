@@ -52,6 +52,7 @@
 ## 🗂️ Database Design
 
 ### Entity Relationship Diagram
+![App Snapshot](images/dbo_diagram.png)
 ```
     REGION MASTER (1) ──────┐
     ┌─────────────────┐     │
