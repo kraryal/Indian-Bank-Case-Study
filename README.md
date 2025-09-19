@@ -109,14 +109,4 @@ WHERE days_inactive > 30 OR days_inactive IS NULL;
 1. Execute files in numerical order (01_database_creation.sql → 09_stored_procedures.sql)
 2. Run 10_sample_data_extended.sql for realistic data
 3. Execute 11_demo_analytics.sql for impressive results
-
-### 2. **Add GitHub Topics/Tags**
-In your GitHub repo settings, add these tags:
-- `sql-server`
-- `database-design` 
-- `banking-system`
-- `data-science`
-- `business-intelligence`
-- `financial-analytics`
-- `portfolio-project`
 ```
