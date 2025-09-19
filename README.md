@@ -98,3 +98,13 @@ WHERE days_inactive > 30 OR days_inactive IS NULL;
 ├── 📋 09_stored_procedures.sql     # Automated reporting
 └── 💡 sample_analytics.sql        # Demo queries for hiring managers
 ```
+## 🚀 **Quick Start for Hiring Managers**
+```bash
+# Option 1: Use backup file (Recommended)
+1. Restore Ibank.bak in SQL Server Management Studio
+2. Run QUICK_DEMO.sql for immediate results
+
+# Option 2: Build from scratch  
+1. Execute files in numerical order (01_database_creation.sql → 09_stored_procedures.sql)
+2. Run 07_sample_data_extended.sql for realistic data
+3. Execute 10_demo_analytics.sql for impressive results
