@@ -96,7 +96,8 @@ WHERE days_inactive > 30 OR days_inactive IS NULL;
 ├── 📈 07_queries_advanced_analytics.sql # Complex analytics
 ├── 🧮 08_queries_complex_analysis.sql # Advanced analysis
 ├── 📋 09_stored_procedures.sql     # Automated reporting
-└── 💡 sample_analytics.sql        # Demo queries for hiring managers
+└── 💡 10_sample_data_extended.sql
+└── 💡 11_demo_analytics.sql        # Demo queries for hiring managers
 ```
 ## 🚀 **Quick Start for Hiring Managers**
 ```bash
@@ -106,5 +107,5 @@ WHERE days_inactive > 30 OR days_inactive IS NULL;
 
 # Option 2: Build from scratch  
 1. Execute files in numerical order (01_database_creation.sql → 09_stored_procedures.sql)
-2. Run 07_sample_data_extended.sql for realistic data
-3. Execute 10_demo_analytics.sql for impressive results
+2. Run 10_sample_data_extended.sql for realistic data
+3. Execute 11_demo_analytics.sql for impressive results
