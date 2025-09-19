@@ -27,8 +27,8 @@
 ---
 *This project demonstrates production-ready database skills applicable to Data Science roles in Banking, Finance, and Business Intelligence.*
 
-### 2. **Add Sample Queries Showcase**
-**File: `sample_analytics.sql`**
+### 2. ** Sample Queries Showcase**
+
 ```sql
 -- =====================================================
 -- SAMPLE ANALYTICS FOR HIRING MANAGERS
@@ -99,7 +99,7 @@ WHERE days_inactive > 30 OR days_inactive IS NULL;
 └── 💡 10_sample_data_extended.sql
 └── 💡 11_demo_analytics.sql        # Demo queries for hiring managers
 ```
-## 🚀 **Quick Start for Hiring Managers**
+## 🚀 **Quick Start **
 ```bash
 # Option 1: Use backup file (Recommended)
 1. Restore Ibank.bak in SQL Server Management Studio
